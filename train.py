@@ -18,10 +18,10 @@ from scipy.stats import gmean
 
 from dataset import get_dataloader, get_dataset
 from EMA import WeightExponentialMovingAverage
-from model import ProMOSNet
+from model import DeePMOS
 
 
-parser = argparse.ArgumentParser(description='Training ProMOSmodel.')
+parser = argparse.ArgumentParser(description='Training DeePMOS model.')
 parser.add_argument('--num_epochs', type=int, help='Number of epochs.', default=60)
 parser.add_argument('--lamb_c', type=float, help='Weight of consistency loss lambda_c.', default=1.0)
 parser.add_argument('--lamb_t', type=float, help='Weight of teacher model loss lambda_t.', default=0.0)
@@ -141,8 +141,8 @@ def train(num_epochs,
           valid_loader,
           test_loader):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = ProMOSNet().to(device)
-    momentum_model = ProMOSNet().to(device) 
+    model = DeePMOS().to(device)
+    momentum_model = DeePMOS().to(device) 
     for param in momentum_model.parameters(): 
         param.detach_()
     momentum_model.load_state_dict(model.state_dict())

@@ -1,4 +1,4 @@
-# ProMOSNet
+# DeePMOS
 
 Author: Xinyu Liang, Fredrik Cumlin
 Email: hopeliang990504@gmail.com, fcumlin@gmail.com

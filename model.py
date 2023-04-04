@@ -69,10 +69,10 @@ class MeanNet(nn.Module):
         return mos_mean, mos_var
 
 
-class ProMOSNet(nn.Module):
+class DeePMOS(nn.Module):
     
     def __init__(self):
-        super(ProMOSNet, self).__init__()
+        super(DeePMOS, self).__init__()
         self.MeanNet = MeanNet()
 
     def forward(self, speech_spectrum):
