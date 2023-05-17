@@ -234,16 +234,7 @@ def train(num_epochs,
             all_loss = []
 
         if epoch % log_valid == 0:
-            MSE_teacher, LCC_teacher, SRCC_teacher, sys_SRCC_teacher = valid(momentum_model,
-                                                                     dataset,
-                                                                     valid_loader,
-                                                                     valid_set.systems,
-                                                                     epoch,
-                                                                     'Valid(teacher)',
-                                                                     device,
-                                                                     MSE_teacher,
-                                                                     LCC_teacher,
-                                                                     SRCC_teacher)
+            MSE_teacher, LCC_teacher, SRCC_teacher, sys_SRCC_teacher = valid(momentum_model, dataset, valid_loader, valid_set.systems, epoch, 'Valid(teacher)', device, MSE_teacher, LCC_teacher, SRCC_teacher)
 
             if LCC_teacher[-1] > best_LCC_teacher:
                 best_LCC_teacher = LCC_teacher[-1]
@@ -252,7 +243,7 @@ def train(num_epochs,
         epoch += 1
 
     print('Best model performance test:')
-    _, _, _, _ = valid(best_model, test_loader, test_set.systems, epoch, 'Test(best)', device, MSE_teacher, LCC_teacher, SRCC_teacher)
+    _, _, _, _ = valid(best_model, dataset, test_loader, test_set.systems, epoch, 'Test(best)', device, MSE_teacher, LCC_teacher, SRCC_teacher)
     return best_model, train_loss, MSE_list, LCC_list, SRCC_list, LCC_teacher
 
 def main():
