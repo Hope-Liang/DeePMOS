@@ -264,7 +264,7 @@ def main():
     valid_loader = get_dataloader(valid_set, batch_size=1, num_workers=1)
     test_loader = get_dataloader(test_set, batch_size=1, num_workers=1)
     
-    best_model, last_model, train_loss, MSE_list, LCC_list, SRCC_list, LCC_teacher = train(
+    best_model, train_loss, MSE_list, LCC_list, SRCC_list, LCC_teacher = train(
         args.num_epochs, args.lamb_c, args.lamb_t, args.log_valid, args.log_epoch, 
         dataset, train_set, valid_set, test_set, train_loader, valid_loader, test_loader)
 
