@@ -237,7 +237,7 @@ def main():
     test_loader = get_dataloader(test_set, batch_size=1, num_workers=1)
     
     best_model, train_loss, MSE_list, LCC_list, SRCC_list, LCC_student = train(
-        args.num_epochs, args.lamb_c, args.lamb_t, args.log_valid, args.log_epoch, 
+        args.num_epochs, args.log_valid, args.log_epoch, 
         dataset, train_set, valid_set, test_set, train_loader, valid_loader, test_loader)
 
     torch.save(best_model, args.save_path+'best.pt')
