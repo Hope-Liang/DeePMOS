@@ -52,7 +52,7 @@ def valid(model,
     true_sys_mean_scores = {system:[] for system in systems}
 
     for i, batch in enumerate(tqdm(dataloader, ncols=0, desc=prefix, unit=" step")):
-        wif dataset == 'vcc2018':
+        if dataset == 'vcc2018':
             wav, filename, _, mos, _ = batch
             sys_names = list(set([name.split("_")[0] for name in filename])) # system name, e.g. 'D03'
         elif dataset == 'bvcc':
