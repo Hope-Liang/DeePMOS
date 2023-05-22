@@ -173,7 +173,6 @@ def train(num_epochs,
     SRCC_list = []
     train_loss = []
     MSE_teacher, LCC_teacher, SRCC_teacher = [], [], []
-    MSE_student, LCC_student, SRCC_student = [], [], []
     
     model.train()
     epoch = 0
