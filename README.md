@@ -9,11 +9,14 @@ For BVCC data, here's the [link](https://zenodo.org/record/6572573#.Yphw5y8RprQ)
 
 ## Training
 
-Then run ```train.py```, which depend on the following arguments:
+Run ```train.py```, which depend on the following arguments:
 * ```--num_epochs```: The number of epochs during training.
+* ```--lamb_c```: Weight of consistency loss lambda_c.
+* ```--lamb_t```: Weight of teacher model loss lambda_t.
 * ```--log_valid```: The number of epochs between logging results on validation data.
 * ```--log_epoch```: The number of epochs between logging training losses.
-* ```--data_path```: Path to the data folder.
+* ```--dataset```: The number of epochs between logging training losses.
+* ```--data_path```: Dataset. 'vcc2018' or 'bvcc'.
 * ```--id_table```: Path to the id_table folder.
 * ```--save_path```: Path for the best model to be saved.
 
