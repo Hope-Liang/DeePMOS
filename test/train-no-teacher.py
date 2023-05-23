@@ -21,7 +21,7 @@ from dataset import get_dataloader, get_dataset
 from model import DeePMOS
 
 
-parser = argparse.ArgumentParser(description='Training ProMOSmodel.')
+parser = argparse.ArgumentParser(description='Training DeePMOS model.')
 parser.add_argument('--num_epochs', type=int, help='Number of epochs.', default=60)
 parser.add_argument('--log_valid', type=int, help='Logging valid score each log_valid epochs.', default=1)
 parser.add_argument('--log_epoch', type=int, help='Logging training during a global run.', default=1)
