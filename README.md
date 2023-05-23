@@ -5,7 +5,6 @@ Email: hopeliang990504@gmail.com, fcumlin@gmail.com
 
 ## Data Preparation
 For VCC2018 data, it can be downloaded from [here](https://github.com/unilight/LDNet/tree/main/data). <br/>
-
 For BVCC data, here's the [link](https://zenodo.org/record/6572573#.Yphw5y8RprQ).
 
 ## Training
