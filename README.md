@@ -1,6 +1,6 @@
 # DeePMOS
 
-Author: Xinyu Liang, Fredrik Cumlin
+Author: Xinyu Liang, Fredrik Cumlin <br/>
 Email: hopeliang990504@gmail.com, fcumlin@gmail.com
 
 ## Data Preparation
