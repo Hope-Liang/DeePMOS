@@ -215,7 +215,7 @@ def train(num_epochs,
         epoch += 1
 
     print('Best model performance test:')
-    _, _, _, _ = valid(best_model, test_loader, test_set.systems, epoch, 'Test(best)', device, MSE_student, LCC_student, SRCC_student)
+    _, _, _, _ = valid(best_model, dataset, test_loader, test_set.systems, epoch, 'Test(best)', device, MSE_student, LCC_student, SRCC_student)
     return best_model, train_loss, MSE_list, LCC_list, SRCC_list, LCC_student
 
 def main():
