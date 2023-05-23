@@ -20,9 +20,9 @@ from EMA import WeightExponentialMovingAverage
 from model import ProMOSNet
 
 
-parser = argparse.ArgumentParser(description='Testing ProMOSmodel.')
-parser.add_argument('--data_path', type=str, help='Path to data.', default='../testVCC2/')
-parser.add_argument('--id_table', type=str, help='Path to ID of judges.', default='./id_table/')
+parser = argparse.ArgumentParser(description='Testing DeePMOS model.')
+parser.add_argument('--data_path', type=str, help='Path to data.', default='../VCC2018/testVCC2/')
+parser.add_argument('--id_table', type=str, help='Path to ID of judges.', default='../VCC2018/id_table/')
 parser.add_argument('--model_path', type=str, help='Path to load the model.', default='')
 args = parser.parse_args()
 
@@ -30,12 +30,9 @@ def main():
     data_path = args.data_path
     model_path = args.model_path
     id_table = args.id_table
-    test_set = get_dataset(data_path,
-                           "testing_data.csv",
-                           vcc18=True,
-                           valid=True,
-                           idtable=os.path.join(id_table, 'idtable.pkl'))
+    test_set = get_dataset(data_path, "testing_data.csv", vcc18=True, valid=True, idtable=os.path.join(id_table, 'idtable.pkl'))
     test_loader = get_dataloader(test_set, batch_size=1, num_workers=1)
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = torch.load(model_path,map_location=device)
 
