@@ -15,8 +15,8 @@ Run ```train.py```, which depend on the following arguments:
 * ```--lamb_t```: Weight of teacher model loss lambda_t.
 * ```--log_valid```: The number of epochs between logging results on validation data.
 * ```--log_epoch```: The number of epochs between logging training losses.
-* ```--dataset```: The number of epochs between logging training losses.
-* ```--data_path```: Dataset. 'vcc2018' or 'bvcc'.
+* ```--dataset```: Dataset. 'vcc2018' or 'bvcc'.
+* ```--data_path```: Path to the dataset folder.
 * ```--id_table```: Path to the id_table folder.
 * ```--save_path```: Path for the best model to be saved.
 
