@@ -1,7 +1,7 @@
 # DeePMOS
 
-Author: Xinyu Liang, Fredrik Cumlin <br/>
-Email: hopeliang990504@gmail.com, fcumlin@gmail.com
+Authors: Xinyu Liang, Fredrik Cumlin <br/>
+Emails: hopeliang990504@gmail.com, fcumlin@gmail.com
 
 ## Data Preparation
 For VCC2018 data, it can be downloaded from [here](https://github.com/unilight/LDNet/tree/main/data). <br/>
