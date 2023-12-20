@@ -267,6 +267,7 @@ def main():
         args.num_epochs, args.lamb_c, args.lamb_t, args.log_valid, args.log_epoch, 
         dataset, train_set, valid_set, test_set, train_loader, valid_loader, test_loader)
 
-    torch.save(best_model, args.save_path+'best.pt')
+    model_scripted = torch.jit.script(best_model) # Export to TorchScript
+    model_scripted.save(args.save_path+'best.pt')
 
 main()
